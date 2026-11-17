@@ -1,4 +1,41 @@
-package Task8;
+package task8;
 
-public class Animal {
+public abstract class Animal implements AnimalMove {
+    private String name;
+    private int age;
+    private int weight;
+
+    public Animal() {
+        this.name = "Unknown";
+        this.age = 0;
+        this.weight = 0;
+    }
+
+    public Animal(String name, int age, int weight) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+    }
+
+    public Animal(String name, int age) {
+        this(name, age, 0);
+    }
+
+    public abstract void eat(String food);
+
+    public abstract void getVoice();
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public int getAge() { return age; }
+    public void setAge(int age) { this.age = age; }
+
+    public int getWeight() { return weight; }
+    public void setWeight(int weight) { this.weight = weight; }
+
+    @Override
+    public String toString() {
+        return "name='" + name + "', age=" + age + ", weight=" + weight;
+    }
 }

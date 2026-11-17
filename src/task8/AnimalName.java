@@ -1,4 +1,7 @@
-package Task8;
+package task8;
 
-public class AnimalName {
+public interface AnimalName {
+    static void name(String name) {
+        System.out.println("Animal name: " + name);
+    }
 }

@@ -1,4 +1,8 @@
-package Task8;
+package task8;
 
-public class AnimalMove {
+public interface AnimalMove {
+    default void move() {
+        System.out.println("Class " + this.getClass().getSimpleName()
+                + ": the animal moves in some general way");
+    }
 }

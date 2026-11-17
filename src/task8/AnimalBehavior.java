@@ -1,4 +1,5 @@
-package Task8;
+package task8;
 
-public class AnimalBehavior {
+public interface AnimalBehavior {
+    void sleep();
 }
